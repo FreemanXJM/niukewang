@@ -12,7 +12,7 @@ import java.util.*;
 import java.util.Set;
 
 public class BM6 {
-    public boolean hasCycle(ListNode head) {
+    public static boolean hasCycle(ListNode head) {
         ListNode pos = head;
         Set<ListNode> visited = new HashSet<ListNode>();
         while(pos != null){
@@ -24,5 +24,18 @@ public class BM6 {
             pos = pos.next;
         }
         return false;
+    }
+
+    public static void main(String[] args) {
+        ListNode list1 = new ListNode(1);
+        list1.add(2);
+        list1.add(3);
+        ListNode list2 = list1.next.next;
+        list1.add(4);
+        list1.add(5);
+        ListNode list3 = list2.next.next;
+        list3.next = list2;
+        boolean a = hasCycle(list1);
+        System.out.println(a);
     }
 }
