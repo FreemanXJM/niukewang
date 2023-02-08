@@ -1,5 +1,8 @@
 package 链表;
 
+//描述
+//        给定一个链表，删除链表的倒数第 n 个节点并返回链表的头指针
+
 public class BM9 {
     public static ListNode removeNthFromEnd (ListNode head, int n) {
         //添加表头
